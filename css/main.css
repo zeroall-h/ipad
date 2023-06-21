@@ -277,7 +277,7 @@ a.link::after {
 .whitebox .icon {
   margin-bottom: 20px;
 }
-.whitebox h1 {
+.whitebox h2 {
   font-size: 50px;
   font-weight: 600;
   line-height: 1.3;
@@ -298,7 +298,7 @@ a.link::after {
   .whitebox .icon {
     width: 44px;
   }
-  .whitebox h1 {
+  .whitebox h2 {
     font-size: 36px;
   }
 }
@@ -310,38 +310,38 @@ a.link::after {
 }
 
 
-/* Header */
-header {
+/* .header */
+.header {
   --header-height: 44px;
   background-color: var(--color-header);
   position: relative;
   z-index: 9;
-  transition: .4s;
+  /* transition: .4s; */
 }
-header .inner {
+.header .inner {
   max-width: 1020px;
   height: var(--header-height);
 }
-header .mobile-layout {
+.header .mobile-layout {
   display: none;
 }
 
-/* Header / Menu */
-header ul.menu {
+/* .header / Menu */
+.header ul.menu {
   display: flex;
   justify-content: space-between;
   height: var(--header-height);
 }
-header ul.menu > li {
+.header ul.menu > li {
   display: flex;
   position: relative;
   cursor: pointer;
   transition: .4s;
 }
-header ul.menu > li.menu-starter {
+.header ul.menu > li.menu-starter {
   display: none;
 }
-header ul.menu > li > a {
+.header ul.menu > li > a {
   display: flex;
   align-items: center;
   padding: 0 10px;
@@ -349,29 +349,29 @@ header ul.menu > li > a {
   color: var(--color-font-lightgray);
   opacity: .8;
 }
-header ul.menu > li.apple-logo > a,
-header ul.menu > li.search-starter > a,
-header ul.menu > li.basket-starter > a {
+.header ul.menu > li.apple-logo > a,
+.header ul.menu > li.search-starter > a,
+.header ul.menu > li.basket-starter > a {
   width: 14px;
   text-indent: -9999px;
   background-repeat: no-repeat;
   background-position: center 13px;
 }
-header ul.menu > li.apple-logo > a {
+.header ul.menu > li.apple-logo > a {
   background-image: url("../images/header_apple.svg");
 }
-header ul.menu > li.search-starter > a {
+.header ul.menu > li.search-starter > a {
   background-image: url("../images/header_search.svg");
 }
-header ul.menu > li.basket-starter > a {
+.header ul.menu > li.basket-starter > a {
   background-image: url("../images/header_bag.svg");
 }
-header ul.menu > li:hover > a {
+.header ul.menu > li:hover > a {
   opacity: 1;
 }
 
-/* Header / Menu / Basket */
-header .basket {
+/* .header / Menu / Basket */
+.header .basket {
   width: 290px;
   padding: 10px 20px;
   border: 1px solid var(--color-border);
@@ -385,11 +385,11 @@ header .basket {
   visibility: hidden;
   opacity: 0;
 }
-header .basket.show {
+.header .basket.show {
   visibility: visible;
   opacity: 1;
 }
-header .basket .arrow {
+.header .basket .arrow {
   width: 20px;
   height: 10px;
   overflow: hidden;
@@ -397,7 +397,7 @@ header .basket .arrow {
   top: -10px;
   right: 12px;
 }
-header .basket .arrow::before {
+.header .basket .arrow::before {
   content: "";
   width: 12px;
   height: 12px;
@@ -409,30 +409,30 @@ header .basket .arrow::before {
   top: 0;
   left: 50%;
 }
-header .basket .message {
+.header .basket .message {
   padding: 30px 0;
   font-size: 13px;
   color: var(--color-font-darkgray);
   text-align: center;
 }
-header .basket ul {
+.header .basket ul {
   margin-top: 10px;
 }
-header .basket ul li {
+.header .basket ul li {
   border-top: 1px solid var(--color-border);
 }
-header .basket ul li a {
+.header .basket ul li a {
   display: block;
   padding: 14px;
   font-size: 13px;
   color: var(--color-link);
 }
-header .basket ul li a:hover {
+.header .basket ul li a:hover {
   text-decoration: underline;
 }
 
-/* Header / Search */
-header .search-wrap {
+/* .header / Search */
+.header .search-wrap {
   width: 100%;
   position: absolute;
   top: 0;
@@ -441,12 +441,12 @@ header .search-wrap {
   visibility: hidden;
   opacity: 0;
 }
-header .search {
+.header .search {
   max-width: 680px;
   margin: 0 auto;
   position: relative;
 }
-header .search .shadow {
+.header .search .shadow {
   width: 100%;
   height: 100%;
   background-color: var(--color-shadow);
@@ -454,10 +454,10 @@ header .search .shadow {
   top: 0;
   left: 0;
 }
-header .search .textfield {
+.header .search .textfield {
   position: relative;
 }
-header .search input {
+.header .search input {
   width: 100%;
   height: var(--header-height);
   padding: 0 40px;
@@ -468,7 +468,7 @@ header .search input {
   font-size: 17px;
   color: var(--color-white);
 }
-header .search .search-icon {
+.header .search .search-icon {
   width: 40px;
   height: var(--header-height);
   background-image: url("../images/header_search.svg");
@@ -479,7 +479,7 @@ header .search .search-icon {
   top: 0;
   left: 0;
 }
-header .search .search-closer {
+.header .search .search-closer {
   width: 40px;
   height: var(--header-height);
   background-image: url("../images/header_close.svg");
@@ -491,13 +491,13 @@ header .search .search-closer {
   right: 0;
   cursor: pointer;
 }
-header .search .search-closer:hover {
+.header .search .search-closer:hover {
   opacity: 1;
 }
-header .search .search-canceler {
+.header .search .search-canceler {
   display: none;
 }
-header .search .autocompletes {
+.header .search .autocompletes {
   width: 100%;
   padding: 26px 40px 20px;
   border-radius: 0 0 18px 18px;
@@ -507,61 +507,61 @@ header .search .autocompletes {
   top: var(--header-height);
   left: 0;
 }
-header .search .autocompletes h3 {
+.header .search .autocompletes h3 {
   font-size: 12px;
   color: var(--color-font-darkgray);
   margin-top: 12px;
 }
-header .search .autocompletes ul li a {
+.header .search .autocompletes ul li a {
   display: block;
   margin: 0 -14px;
   padding: 10px 0 10px 30px;
   font-size: 14px;
   cursor: pointer;
 }
-header .search .autocompletes ul li:hover a {
+.header .search .autocompletes ul li:hover a {
   background-color: var(--color-section);
   color: var(--color-link);
 }
-header .clone-menu {
+.header .clone-menu {
   display: none;
 }
 
 /* Search Animation */
 /* 스타일을 한 번에 지정 */
-header .search input,
-header .search .search-icon,
-header .search .autocompletes h3,
-header .search .autocompletes li {
+.header .search input,
+.header .search .search-icon,
+.header .search .autocompletes h3,
+.header .search .autocompletes li {
   transition: .6s;
   transform: translate(100px, 0);
 }
-header.searching ul.menu > li {
+.header.searching ul.menu > li {
   transform: scale(.7);
   opacity: 0;
 }
-header.searching .search-wrap {
+.header.searching .search-wrap {
   transition-delay: .2s;
   opacity: 1;
   visibility: visible;
 }
-header.searching .search input,
-header.searching .search .search-icon,
-header.searching .search .autocompletes h3,
-header.searching .search .autocompletes li {
+.header.searching .search input,
+.header.searching .search .search-icon,
+.header.searching .search .autocompletes h3,
+.header.searching .search .autocompletes li {
   transition-delay: .2s;
   transform: translate(0, 0);
 }
 
 @media (max-width: 1000px) {
-  header .inner {
+  .header .inner {
     padding: 0 10px;
   }
 }
 
 @media (max-width: 740px) {
-  /* Header 전체 배경 */
-  header::before {
+  /* .header 전체 배경 */
+  .header::before {
     content: "";
     position: fixed;
     top: var(--header-height);
@@ -571,15 +571,15 @@ header.searching .search .autocompletes li {
     background-color: var(--color-header);
     transition: .4s;
   }
-  header ul.menu > li {
+  .header ul.menu > li {
     display: none;
   }
-  header ul.menu > li.menu-starter,
-  header ul.menu > li.apple-logo,
-  header ul.menu > li.basket-starter {
+  .header ul.menu > li.menu-starter,
+  .header ul.menu > li.apple-logo,
+  .header ul.menu > li.basket-starter {
     display: flex;
   }
-  header ul.menu > li.menu-starter span {
+  .header ul.menu > li.menu-starter span {
     display: block;
     width: 15px;
     height: 1px;
@@ -587,31 +587,31 @@ header.searching .search .autocompletes li {
     margin-bottom: 6px;
     transition: .4s;
   }
-  header ul.menu > li.menu-starter span:last-child {
+  .header ul.menu > li.menu-starter span:last-child {
     margin-bottom: 0;
   }
-  header .search-wrap {
+  .header .search-wrap {
     padding: 0 20px 14px;
     border-bottom: 1px solid var(--color-header);
     box-sizing: border-box;
     top: var(--header-height);
   }
-  header .search {
+  .header .search {
     max-width: 590px;
   }
-  header .search .shadow {
+  .header .search .shadow {
     display: none;
   }
-  header .search .textfield {
+  .header .search .textfield {
     border-radius: 10px;
     background-color: #1D1D1D;
     width: 100%;
     transition: .2s;
   }
-  header .search .search-closer {
+  .header .search .search-closer {
     display: none;
   }
-  header .search .search-canceler {
+  .header .search .search-canceler {
     height: var(--header-height);
     display: flex;
     align-items: center;
@@ -625,13 +625,13 @@ header.searching .search .autocompletes li {
     visibility: hidden;
     opacity: 0;
   }
-  header .search input,
-  header .search .search-icon,
-  header .search .autocompletes h3,
-  header .search .autocompletes li {
+  .header .search input,
+  .header .search .search-icon,
+  .header .search .autocompletes h3,
+  .header .search .autocompletes li {
     transform: translate(0, 0);
   }
-  header .search .autocompletes {
+  .header .search .autocompletes {
     top: 58px;
     padding: 26px 0 20px;
     background-color: transparent;
@@ -640,21 +640,21 @@ header.searching .search .autocompletes li {
     visibility: hidden;
     opacity: 0;
   }
-  header .search .autocompletes ul li {
+  .header .search .autocompletes ul li {
     border-bottom: 1px solid var(--color-header);
   }
-  header .search .autocompletes ul li:last-child {
+  .header .search .autocompletes ul li:last-child {
     border-bottom: none;
   }
-  header .search .autocompletes ul li a {
+  .header .search .autocompletes ul li a {
     padding: 16px 0 16px 16px;
     color: var(--color-font-middlegray);
   }
-  header .search .autocompletes ul li:hover a {
+  .header .search .autocompletes ul li:hover a {
     background-color: transparent;
     color: var(--color-link);
   }
-  header .clone-menu {
+  .header .clone-menu {
     display: block;
     visibility: hidden;
     opacity: 0;
@@ -667,63 +667,63 @@ header.searching .search .autocompletes li {
     transition: .4s;
     transform: translate(0, -50px);
   }
-  header .clone-menu ul {
+  .header .clone-menu ul {
     max-width: 590px;
     margin: 4px auto;
   }
-  header .clone-menu ul li {
+  .header .clone-menu ul li {
     border-bottom: 1px solid var(--color-header);
   }
-  header .clone-menu ul li:last-child {
+  .header .clone-menu ul li:last-child {
     border-bottom: none;
   }
-  header .clone-menu ul li a {
+  .header .clone-menu ul li a {
     display: block;
     padding: 16px 0;
     color: var(--color-font-middlegray);
     font-size: 14px;
   }
-  header .clone-menu ul li:hover a {
+  .header .clone-menu ul li:hover a {
     color: var(--color-white);
   }
-  header.menuing {
+  .header.menuing {
     background-color: var(--color-black);
   }
-  header.menuing::before {
+  .header.menuing::before {
     height: 100vh;
     background-color: var(--color-black);
   }
-  header.menuing ul.menu > li.menu-starter span:first-child {
+  .header.menuing ul.menu > li.menu-starter span:first-child {
     transform: translate(0, 3.5px) rotate(45deg);
   }
-  header.menuing ul.menu > li.menu-starter span:last-child {
+  .header.menuing ul.menu > li.menu-starter span:last-child {
     transform: translate(0, -3.5px) rotate(-45deg);
   }
-  header.menuing .search-wrap {
+  .header.menuing .search-wrap {
     opacity: 1;
     visibility: visible;
   }
-  header.menuing .clone-menu {
+  .header.menuing .clone-menu {
     transform: translate(0, 0);
     visibility: visible;
     opacity: 1;
   }
-  header.menuing.searching--mobile {
+  .header.menuing.searching--mobile {
     transform: translate(0, -30px);
   }
-  header.menuing.searching--mobile .search .textfield {
+  .header.menuing.searching--mobile .search .textfield {
     width: calc(100% - 55px);
   }
-  header.menuing.searching--mobile .search .autocompletes {
+  .header.menuing.searching--mobile .search .autocompletes {
     transform: translate(0, 0);
     visibility: visible;
     opacity: 1;
   }
-  header.menuing.searching--mobile .search .search-canceler {
+  .header.menuing.searching--mobile .search .search-canceler {
     visibility: visible;
     opacity: 1;
   }
-  header.menuing.searching--mobile .clone-menu {
+  .header.menuing.searching--mobile .clone-menu {
     transform: translate(0, 100px);
     visibility: hidden;
     opacity: 0;
@@ -824,7 +824,7 @@ nav .menu li.active:hover a {
   }
   nav .menu-toggler::after {
     transform: rotate(-40deg);
-    right: -9px;
+    right: -7px;
   }
   nav .menu {
     position: absolute;
@@ -884,7 +884,7 @@ main {
 .hero .inner {
   padding-bottom: 110px;
 }
-.hero h1 {
+.hero .title {
   width: 221px;
   height: 91px;
   background-image: url("../images/hero_ipad_text.png");
@@ -942,7 +942,7 @@ main {
   .hero .inner {
     padding-bottom: 80px;
   }
-  .hero h1 {
+  .hero h2 {
     width: 166px;
     height: 68px;
     transform: translate(448px, 165px);
@@ -976,7 +976,7 @@ main {
   .hero .inner {
     padding-top: 40px;
   }
-  .hero h1 {
+  .hero h2 {
     margin: 0 auto 40px;
     position: static;
     transform: none;
@@ -1023,7 +1023,7 @@ main {
   margin-top: 110px;
 }
 /* Power / Multiple Apps */
-.power .multiple-apps h1 {
+.power .multiple-apps h2 {
   width: 500px;
   height: 280px;
   background-image: url("../images/power_headline.png");
@@ -1075,7 +1075,7 @@ main {
   .power {
     margin-top: 80px;
   }
-  .power .multiple-apps h1 {
+  .power .multiple-apps h2 {
     width: 310px;
     height: 180px;
   }
@@ -1121,7 +1121,7 @@ main {
 }
 
 @media (max-width: 740px) {
-  .power .multiple-apps h1 {
+  .power .multiple-apps h2 {
     margin: 0 auto;
     transform: none;
   }
@@ -1176,7 +1176,7 @@ main {
   margin-top: 450px;
 }
 /* Display / Notes */
-.display .notes h1 {
+.display .notes h2 {
   width: 630px;
   height: 370px;
   background-image: url("../images/display_headline.png");
@@ -1213,7 +1213,7 @@ main {
   .display {
     margin-top: 180px;
   }
-  .display .notes h1 {
+  .display .notes h2 {
     width: 400px;
     height: 240px;
     transform: translate(120px, 0);
@@ -1245,7 +1245,7 @@ main {
 }
 
 @media (max-width: 740px) {
-  .display .notes h1 {
+  .display .notes h2 {
     width: 290px;
     height: 308px;
     background-image: url("../images/display_headline_mobile.png");
@@ -1292,7 +1292,7 @@ main {
 .camera .stage {
   position: relative;
 }
-.camera .stage h1 {
+.camera .stage h2 {
   width: 650px;
   height: 450px;
   background-image: url("../images/camera_headline.png");
@@ -1363,7 +1363,7 @@ main {
   .camera {
     margin-top: 165px;
   }
-  .camera .stage h1 {
+  .camera .stage h2 {
     width: 405px;
     height: 270px;
     transform: translate(0, 0);
@@ -1408,7 +1408,7 @@ main {
   .camera {
     margin-top: 120px;
   }
-  .camera .stage h1 {
+  .camera .stage h2 {
     width: 304px;
     height: 350px;
     background-image: url("../images/camera_headline_mobile.png");
@@ -1460,7 +1460,7 @@ main {
   margin-top: 202px;
 }
 /* Wireless / Facetime */
-.wireless .facetime h1 {
+.wireless .facetime h2 {
   width: 730px;
   height: 330px;
   background-image: url("../images/wireless_headline.png");
@@ -1493,7 +1493,7 @@ main {
   .wireless {
     margin-top: 140px;
   }
-  .wireless .facetime h1 {
+  .wireless .facetime h2 {
     width: 450px;
     height: 200px;
     transform: translate(70px, 0);
@@ -1522,7 +1522,7 @@ main {
   .wireless {
     margin-top: 120px;
   }
-  .wireless .facetime h1 {
+  .wireless .facetime h2 {
     width: 312px;
     height: 223px;
     background-image: url("../images/wireless_headline_mobile.png");
@@ -1558,7 +1558,7 @@ main {
 .accessories {
   margin-top: 195px;
 }
-.accessories h1 {
+.accessories h2 {
   width: 550px;
   height: 343px;
   background-image: url("../images/accessories_headline.png");
@@ -1593,7 +1593,7 @@ main {
   .accessories {
     margin-top: 120px;
   }
-  .accessories h1 {
+  .accessories h2 {
     width: 384px;
     height: 243px;
   }
@@ -1615,7 +1615,7 @@ main {
 }
 
 @media (max-width: 740px) {
-  .accessories h1 {
+  .accessories h2 {
     width: 300px;
     height: 190px;
   }
@@ -1645,7 +1645,7 @@ main {
 .ipados {
   margin-top: 212px;
 }
-.ipados h1 {
+.ipados h2 {
   width: 530px;
   height: 400px;
   margin: 0 auto;
@@ -1695,7 +1695,7 @@ main {
   .ipados {
     margin-top: 100px;
   }
-  .ipados h1 {
+  .ipados h2 {
     width: 357px;
     height: 274px;
     margin: 0;
@@ -1736,7 +1736,7 @@ main {
 }
 
 @media (max-width: 740px) {
-  .ipados h1 {
+  .ipados h2 {
     width: 300px;
     height: 227px;
     margin: 0 auto;
@@ -1789,7 +1789,7 @@ main {
 .apps {
   margin-top: 368px;
 }
-.apps h1 {
+.apps h2 {
   width: 500px;
   height: 264px;
   background-image: url("../images/apps_headline.png");
@@ -1857,7 +1857,7 @@ main {
   .apps {
     margin-top: 120px;
   }
-  .apps h1 {
+  .apps h2 {
     width: 390px;
     height: 208px;
     transform: none;
@@ -1919,7 +1919,7 @@ main {
 }
 
 @media (max-width: 740px) {
-  .apps h1 {
+  .apps h2 {
     width: 320px;
     height: 169px;
     margin: 0 auto;
@@ -1988,7 +1988,7 @@ main {
 .privacy {
   margin-top: 238px;
 }
-.privacy h1 {
+.privacy h2 {
   width: 482px;
   height: 237px;
   margin-left: auto;
@@ -2023,7 +2023,7 @@ main {
   .privacy {
     margin-top: 120px;
   }
-  .privacy h1 {
+  .privacy h2 {
     width: 368px;
     height: 182px;
     transform: translate(70px, 0);
@@ -2046,7 +2046,7 @@ main {
 }
 
 @media (max-width: 740px) {
-  .privacy h1 {
+  .privacy h2 {
     width: 277px;
     height: 136px;
     margin: 0 auto;
@@ -2066,7 +2066,7 @@ main {
   margin-top: 266px;
   margin-bottom: 170px;
 }
-.accessibility h1 {
+.accessibility h2 {
   width: 384px;
   height: 270px;
   background-image: url("../images/accessibility_headline.png");
@@ -2083,7 +2083,7 @@ main {
     margin-top: 86px;
     margin-bottom: 120px;
   }
-  .accessibility h1 {
+  .accessibility h2 {
     width: 287px;
     height: 205px;
   }
@@ -2102,7 +2102,7 @@ main {
   .accessibility {
     margin-bottom: 50px;
   }
-  .accessibility h1 {
+  .accessibility h2 {
     height: 165px;
     margin: 0 auto;
   }
@@ -2168,7 +2168,7 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-.environment h1 {
+.environment h2 {
   color: #03A10E;
 }
 
