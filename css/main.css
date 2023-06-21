@@ -317,7 +317,6 @@ header {
   position: relative;
   z-index: 9;
   transition: .4s;
-  overflow: hidden;
 }
 header .inner {
   max-width: 1020px;
